@@ -1,5 +1,7 @@
+SUMMARY = "a simple and flexible library for working with XML, XPath and XSLT"
 DESCRIPTION = "dom4j is a simple and flexible Java library for working with XML, XPath and XSLT"
 LICENSE = "BSD"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=3f752b663f2a821c3b32482fc6aece3c"
 
 HOMEPAGE = "http://dom4j.org"
 
@@ -11,8 +13,6 @@ SRC_URI = "\
 	file://debian.patch \
 	"
 
-PNBLACKLIST[dom4j] ?= "BROKEN: indirectly depends on broken 'xom'"
-
 inherit java-library
 
 do_compile() {
@@ -22,7 +22,7 @@ do_compile() {
 	scp="src/java:${WORKDIR}/ws-jaxme-0.5.2/src/api"
 
   javac -sourcepath $scp -cp $cp -d build `find src/java -name "*.java" -and -not -wholename "*datatype*"`
-  (cd src && find org -name "*.properties" -exec cp {} ../build/{} \;)
+  (cd src/java && find org -name "*.properties" -exec cp {} ../../build/{} \;)
 
 	rm -rf build/org/w3c
 	rm -rf build/javax

@@ -1,7 +1,8 @@
-diff -Nur xom-1.1/src15/nu/xom/JDK15XML1_0Parser.java xom-1.1.new/src15/nu/xom/JDK15XML1_0Parser.java
---- xom-1.1/src15/nu/xom/JDK15XML1_0Parser.java	2004-08-17 19:18:30.000000000 +0530
-+++ xom-1.1.new/src15/nu/xom/JDK15XML1_0Parser.java	2007-11-13 15:25:08.000000000 +0530
-@@ -24,9 +24,9 @@
+Index: XOM/src15/nu/xom/JDK15XML1_0Parser.java
+===================================================================
+--- XOM.orig/src15/nu/xom/JDK15XML1_0Parser.java
++++ XOM/src15/nu/xom/JDK15XML1_0Parser.java
+@@ -24,9 +24,9 @@ package nu.xom;
  
  import org.xml.sax.SAXException;
  
@@ -14,7 +15,7 @@ diff -Nur xom-1.1/src15/nu/xom/JDK15XML1_0Parser.java xom-1.1.new/src15/nu/xom/J
  ;
  /**
   * <p>
-@@ -47,8 +47,8 @@
+@@ -47,8 +47,8 @@ class JDK15XML1_0Parser extends SAXParse
        
          super(new DTDConfiguration());
          // workaround for Java 1.5 beta 2 bugs

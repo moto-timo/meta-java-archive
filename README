@@ -7,11 +7,11 @@ Yocto Project build systems.
 This layer depends on:
 
 URI: git://git.openembedded.org/openembedded-core
-branch: daisy
+branch: master
 revision: HEAD
 
 URI: git://git.openembedded.org/meta-openembedded
-branch: daisy
+branch: master
 revision: HEAD
 
 Contributing
@@ -59,6 +59,9 @@ PREFERRED_PROVIDER_virtual/java-initial-native = "cacao-initial-native"
 
 # Possible provider: cacao-native and jamvm-native
 PREFERRED_PROVIDER_virtual/java-native = "jamvm-native"
+
+# Possible provider: jamvm, openjre-8, openjdk-7-jre, cacao, openjdk-8
+PREFERRED_RPROVIDER_java2-runtime = "openjdk-8"
 
 # Optional since there is only one provider for now
 PREFERRED_PROVIDER_virtual/javac-native = "ecj-bootstrap-native"

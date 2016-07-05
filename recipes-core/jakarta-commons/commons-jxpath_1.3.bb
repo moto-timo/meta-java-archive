@@ -4,9 +4,10 @@ PR = "${INC_PR}.1"
 
 DESCRIPTION = "JXPath interpreter for Java"
 
-SRC_URI = "http://archive.apache.org/dist/commons/jxpath/source/${BP}-src.tar.gz"
+LICENSE = "BSD"
+LIC_FILE_CHECKSUM = "file://LICENSE.txt;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-PNBLACKLIST[commons-jxpath] ?= "BROKEN: indirectly depends on broken 'xom'"
+SRC_URI = "http://archive.apache.org/dist/commons/jxpath/source/${BP}-src.tar.gz"
 
 DEPENDS += "commons-logging commons-collections3 commons-beanutils servlet2.3 jdom"
 RDEPENDS_${PN} = "libcommons-logging-java libcommons-collections3-java libcommons-beanutils-java libservlet2.3-java libjdom-java"

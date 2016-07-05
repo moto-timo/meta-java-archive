@@ -1,5 +1,7 @@
+SUMMARY = "Parses, manipulates, and outputs XML using standard Java constructs"
 DESCRIPTION = "Parses, manipulates, and outputs XML using standard Java constructs"
 LICENSE = "BSD"
+LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=897c700e4c122d8f4ef8f6d253a6f744"
 
 HOMEPAGE = "http://jdom.org/"
 
@@ -8,8 +10,6 @@ DEPENDS = "fastjar-native jaxen"
 SRC_URI = "\
 	http://www.jdom.org/dist/binary/archive/jdom-${PV}.tar.gz \
 	"
-
-PNBLACKLIST[jdom] ?= "BROKEN: indirectly depends on broken 'xom'"
 
 inherit java-library
 
